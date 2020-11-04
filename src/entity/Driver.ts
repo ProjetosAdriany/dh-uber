@@ -1,24 +1,16 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { User } from './Client';
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-export class Product {
-    @PrimaryGeneratedColumn()
-    id: number;
+export class Driver {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @Column()
-    price: string;
+  @Column()
+  email: string;
 
-    @Column()
-    link: string;
-
-    @ManyToOne((type) => User, (user) => user.products)
-    user: User;
-
-    constructor(props: Omit<Product, 'id' | 'users'>) {
-        Object.assign(this, props);
-    }
+  @Column()
+  password: string;
 }
