@@ -1,15 +1,25 @@
-version: '3'
+version: "3"
 
 services:
   mysql:
     image: mysql:5.7
+<<<<<<< HEAD
     container_name: db-fake-buscape
     ports:
       - '3306:3306'
+=======
+    container_name: db-dh-uber
+    ports:
+      - "3306:3306"
+>>>>>>> f5861e1e3ccdd6dbfc59c35d12a269d54280b0ae
     volumes:
       - /var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password123
+<<<<<<< HEAD
       MYSQL_DATABASE: db-uber
+=======
+      MYSQL_DATABASE: dh-uber
+>>>>>>> f5861e1e3ccdd6dbfc59c35d12a269d54280b0ae
       MYSQL_USER: root
       MYSQL_PASSWORD: password123
