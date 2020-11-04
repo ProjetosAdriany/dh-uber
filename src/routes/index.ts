@@ -1,8 +1,11 @@
-import { Router } from 'express';
-import IndexController from '../controllers/IndexController';
+import { Router } from "express";
+
+import DriverRouter from "./drivers.routes";
+import usersRouter from "./users.routes";
 
 const routes = Router();
 
-routes.get('/', IndexController.index);
+routes.use("/drivers", DriverRouter);
+routes.use("/users", usersRouter);
 
 export default routes;
